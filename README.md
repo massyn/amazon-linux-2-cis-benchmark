@@ -1,2 +1,4 @@
 # amazon-linux-2-cis-benchmark
-Amazon Linux 2 CIS Benchmark
+
+CIS Amazon Linux 2 Benchmark
+v2.0.0 - 07-28-2021
