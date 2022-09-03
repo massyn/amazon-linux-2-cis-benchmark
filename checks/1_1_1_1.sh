@@ -8,4 +8,6 @@ if ! grep -qF 'install cramfs /bin/true' /etc/modprobe.d/cramfs.conf; then
     echo "install cramfs /bin/true" >> /etc/modprobe.d/cramfs.conf
 fi
 
-rmmod cramfs
+if [[ ! -z $(lsmod | grep -n cramfs) ]]; then
+    rmmod cramfs
+fi

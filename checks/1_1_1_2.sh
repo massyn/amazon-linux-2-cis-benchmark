@@ -8,4 +8,6 @@ if ! grep -qF 'install squashfs /bin/true' /etc/modprobe.d/squashfs.conf; then
     echo "install squashfs /bin/true" >> /etc/modprobe.d/squashfs.conf
 fi
 
-rmmod squashfs
+if [[ ! -z $(lsmod | grep -n squashfs) ]]; then
+    rmmod squashfs
+fi

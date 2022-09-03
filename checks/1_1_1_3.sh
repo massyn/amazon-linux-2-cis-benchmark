@@ -8,4 +8,7 @@ if ! grep -qF 'install udf /bin/true' /etc/modprobe.d/udf.conf; then
     echo "install udf /bin/true" >> /etc/modprobe.d/udf.conf
 fi
 
-rmmod udf
+
+if [[ ! -z $(lsmod | grep -n udf) ]]; then
+    rmmod udf
+fi

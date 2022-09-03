@@ -10,7 +10,8 @@ v2.0.0 - 07-28-2021
 Run the following commands to harden your Amazon Linux 2 instance.
 
 ```bash
-git clone https://github.com/massyn/amazon-linux-2-cis-benchmark/
+sudo yum install git -y
+sudo git clone https://github.com/massyn/amazon-linux-2-cis-benchmark/
 cd amazon-linux-2-cis-benchmark/
-sudo ./amzn2-cis.sh
+sudo bash amzn2-cis.sh
 ```
